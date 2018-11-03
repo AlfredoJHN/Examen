@@ -30,8 +30,8 @@
         {
             this.lblNumeroPulgadas = new System.Windows.Forms.Label();
             this.lblNumeroCentimetros = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbPulgadas = new System.Windows.Forms.TextBox();
+            this.tbCentimetros = new System.Windows.Forms.TextBox();
             this.btnConvertirPulgadasEnCentimetros = new System.Windows.Forms.Button();
             this.btnConvertirCentimetrosEnPulgadas = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -44,7 +44,6 @@
             this.lblNumeroPulgadas.Size = new System.Drawing.Size(105, 13);
             this.lblNumeroPulgadas.TabIndex = 0;
             this.lblNumeroPulgadas.Text = "Número de pulgadas";
-            this.lblNumeroPulgadas.Click += new System.EventHandler(this.lblNumeroPulgadas_Click_1);
             // 
             // lblNumeroCentimetros
             // 
@@ -55,19 +54,19 @@
             this.lblNumeroCentimetros.TabIndex = 1;
             this.lblNumeroCentimetros.Text = "Número de centímetros";
             // 
-            // textBox1
+            // tbPulgadas
             // 
-            this.textBox1.Location = new System.Drawing.Point(237, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.tbPulgadas.Location = new System.Drawing.Point(237, 47);
+            this.tbPulgadas.Name = "tbPulgadas";
+            this.tbPulgadas.Size = new System.Drawing.Size(100, 20);
+            this.tbPulgadas.TabIndex = 2;
             // 
-            // textBox2
+            // tbCentimetros
             // 
-            this.textBox2.Location = new System.Drawing.Point(237, 119);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.tbCentimetros.Location = new System.Drawing.Point(237, 119);
+            this.tbCentimetros.Name = "tbCentimetros";
+            this.tbCentimetros.Size = new System.Drawing.Size(100, 20);
+            this.tbCentimetros.TabIndex = 3;
             // 
             // btnConvertirPulgadasEnCentimetros
             // 
@@ -77,6 +76,7 @@
             this.btnConvertirPulgadasEnCentimetros.TabIndex = 4;
             this.btnConvertirPulgadasEnCentimetros.Text = "Convertir a centímetros";
             this.btnConvertirPulgadasEnCentimetros.UseVisualStyleBackColor = true;
+            this.btnConvertirPulgadasEnCentimetros.Click += new System.EventHandler(this.btnConvertirPulgadasEnCentimetros_Click);
             // 
             // btnConvertirCentimetrosEnPulgadas
             // 
@@ -94,8 +94,8 @@
             this.ClientSize = new System.Drawing.Size(471, 310);
             this.Controls.Add(this.btnConvertirCentimetrosEnPulgadas);
             this.Controls.Add(this.btnConvertirPulgadasEnCentimetros);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbCentimetros);
+            this.Controls.Add(this.tbPulgadas);
             this.Controls.Add(this.lblNumeroCentimetros);
             this.Controls.Add(this.lblNumeroPulgadas);
             this.Name = "FrmConvertirMedidas";
@@ -109,8 +109,8 @@
 
         private System.Windows.Forms.Label lblNumeroPulgadas;
         private System.Windows.Forms.Label lblNumeroCentimetros;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbPulgadas;
+        private System.Windows.Forms.TextBox tbCentimetros;
         private System.Windows.Forms.Button btnConvertirPulgadasEnCentimetros;
         private System.Windows.Forms.Button btnConvertirCentimetrosEnPulgadas;
     }

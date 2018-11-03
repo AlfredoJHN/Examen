@@ -17,14 +17,11 @@ namespace FrmConvertirMedidas
             InitializeComponent();
         }
 
-        private void lblNumeroPulgadas_Click(object sender, EventArgs e)
+        private void btnConvertirPulgadasEnCentimetros_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void lblNumeroPulgadas_Click_1(object sender, EventArgs e)
-        {
-
+            LogicaOperaciones logica = new LogicaOperaciones();
+            tbCentimetros.Text = logica.Operar(tbPulgadas.Text,
+                                             btnConvertirPulgadasEnCentimetros.Text);
         }
     }
 }

@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enumerado.cs" />
+    <Compile Include="LogicaOperaciones.cs" />
     <Compile Include="FrmConvertirMedidas.cs">
       <SubType>Form</SubType>
     </Compile>
