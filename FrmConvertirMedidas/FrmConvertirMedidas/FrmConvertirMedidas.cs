@@ -23,5 +23,12 @@ namespace FrmConvertirMedidas
             tbCentimetros.Text = logica.Operar(tbPulgadas.Text,
                                              btnConvertirPulgadasEnCentimetros.Text);
         }
+
+        private void btnConvertirCentimetrosEnPulgadas_Click(object sender, EventArgs e)
+        {
+            LogicaOperaciones logica = new LogicaOperaciones();
+            tbPulgadas.Text = logica.Operar(tbCentimetros.Text,
+                                             btnConvertirCentimetrosEnPulgadas.Text);
+        }
     }
 }

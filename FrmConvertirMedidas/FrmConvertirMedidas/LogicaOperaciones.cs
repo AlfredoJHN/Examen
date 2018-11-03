@@ -10,18 +10,19 @@ namespace FrmConvertirMedidas
     {
         public string Operar(string operandoA, string Operador)
         {
-            
+            string ResultadoConvertido; 
             double operando1 = Convert.ToDouble(operandoA);
             Enumerado OperadorEnumerado = ConvertirStringEnumeradoOperadores(Operador);
-            double? Resultado = Operar(operando1, Operador);
-            string ResultadoConvertido;
-            if (Resultado != null)
+            double? Resultado = Operar(operando1, OperadorEnumerado);
+            if (Resultado != null || operandoA!=null)
             {
                 ResultadoConvertido = Resultado.ToString();
             }
             else
             {
                 ResultadoConvertido = "Error";
+                System.Windows.Forms.MessageBox.Show(
+                        "No se han introducido datos");
             }
             return ResultadoConvertido;
         }
@@ -31,11 +32,11 @@ namespace FrmConvertirMedidas
             Enumerado Resultado;
             switch (Operador)
             {
-                case "Centímetros a Pulgadas":
+                case "Convertir a centímetros":
                 case "Centimeters to Inches":
                     Resultado = Enumerado.CentimetrosEnPulgadas;
                     break;
-                case "Pulgadas a Centímetros":
+                case "Convertir a pulgadas":
                 case "Inches to Centimeters":
                     Resultado = Enumerado.PulgadasEnCentimetros;
                     break;
@@ -48,22 +49,31 @@ namespace FrmConvertirMedidas
         private double? Operar(double operandoA,
                               Enumerado Operador)
         {
-            double? Resultado = 0.0;
-            double Conv = 2.54;
-            switch (Operador)
+            if (operandoA != 0.0)
             {
-                case Enumerado.CentimetrosEnPulgadas:
-                    Resultado = operandoA/Conv;
-                    break;
-                case Enumerado.PulgadasEnCentimetros:
-                    Resultado = operandoA*Conv;
-                    break;
-                default:
-                    System.Windows.Forms.MessageBox.Show(
-                        "No se ha seleccionado ningún operador");
-                    break;
+                double? Resultado = 0.0;
+                double Conv = 2.54;
+                switch (Operador)
+                {
+                    case Enumerado.CentimetrosEnPulgadas:
+                        Resultado = operandoA * Conv;
+                        break;
+                    case Enumerado.PulgadasEnCentimetros:
+                        Resultado = operandoA / Conv;
+                        break;
+                    default:
+                        System.Windows.Forms.MessageBox.Show(
+                            "No se ha seleccionado ningún operador");
+                        break;
+                }
+                return Resultado;
             }
-            return Resultado;
+            else
+            {
+                System.Windows.Forms.MessageBox.Show(
+                        "No se han introducido datos");
+                return 0;
+            }
         }
     }
 }

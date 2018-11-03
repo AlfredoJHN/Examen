@@ -84,8 +84,9 @@
             this.btnConvertirCentimetrosEnPulgadas.Name = "btnConvertirCentimetrosEnPulgadas";
             this.btnConvertirCentimetrosEnPulgadas.Size = new System.Drawing.Size(147, 23);
             this.btnConvertirCentimetrosEnPulgadas.TabIndex = 5;
-            this.btnConvertirCentimetrosEnPulgadas.Text = "Convertir a Pulgadas";
+            this.btnConvertirCentimetrosEnPulgadas.Text = "Convertir a pulgadas";
             this.btnConvertirCentimetrosEnPulgadas.UseVisualStyleBackColor = true;
+            this.btnConvertirCentimetrosEnPulgadas.Click += new System.EventHandler(this.btnConvertirCentimetrosEnPulgadas_Click);
             // 
             // FrmConvertirMedidas
             // 
